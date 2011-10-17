@@ -1,0 +1,22 @@
+{
+    "name": "amazon-lib",
+    "description": "AWS Library",
+    "version": "0.0.1",
+    "keywords" : ["Amazon", "AWS", "SQS", "SNS"],
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:doug-martin/amazon-lib.git"
+    },
+    "author": "Doug Martin",
+    "main": "index.js",
+    "dependencies" : {
+        "comb" : ">=0.0.3",
+        "xml2js" : ">=0.1.11"
+    },
+    "directories": {
+        "lib": "lib"
+    },
+    "engines": {
+        "node": ">= 0.4.4"
+    }
+}
