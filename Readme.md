@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/doug-martin/amazon-lib.png)](http://travis-ci.org/doug-martin/amazon-lib)
 #Amazon lib
 
 ##Overview
