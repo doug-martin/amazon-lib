@@ -74,7 +74,7 @@ it.describe("Make a call to the amazon sns",function (it) {
             assert.equal(results.test, "test");
             assert.equal(mockHttps.requestCount, 1);
         })
-    }, console.log);
+    });
 
     it.should("create topic", function () {
         var assertOptions = function (options) {
@@ -90,7 +90,7 @@ it.describe("Make a call to the amazon sns",function (it) {
         return snsClient.createTopic(testSearchOptions).then(function (results) {
             assert.equal(results, "test");
             assert.equal(mockHttps.requestCount, 1);
-        }, console.log)
+        })
     });
 
     it.should("delete topic", function () {

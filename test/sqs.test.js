@@ -98,7 +98,7 @@ it.describe("Make a call to the amazon sqs",function (it) {
         var sqsClient = new aws.SQSClient(extd.merge(testSearchOptions, {http: mockHttp, https: mockHttps}));
         return sqsClient.receiveMessages(testSearchOptions).then(function () {
             assert.equal(mockHttps.requestCount, 1);
-        },console.log)
+        })
     });
 
     it.should("add permission", function () {
@@ -114,7 +114,7 @@ it.describe("Make a call to the amazon sqs",function (it) {
         var sqsClient = new aws.SQSClient(extd.merge(testSearchOptions, {http: mockHttp, https: mockHttps}));
         return sqsClient.addPermission(testSearchOptions, {accountId:"test", actionName: 'test'}).then(function () {
             assert.equal(mockHttps.requestCount, 1);
-        },console.log)
+        })
     });
 
     it.should("remove permission", function () {
@@ -130,7 +130,7 @@ it.describe("Make a call to the amazon sqs",function (it) {
         var sqsClient = new aws.SQSClient(extd.merge(testSearchOptions, {http: mockHttp, https: mockHttps}));
         return sqsClient.removePermission(testSearchOptions).then(function () {
             assert.equal(mockHttps.requestCount, 1);
-        },console.log)
+        })
     });
 
     it.should("send message", function () {
@@ -146,7 +146,7 @@ it.describe("Make a call to the amazon sqs",function (it) {
         var sqsClient = new aws.SQSClient(extd.merge(testSearchOptions, {http: mockHttp, https: mockHttps}));
         return sqsClient.sendMessage(testSearchOptions).then(function () {
             assert.equal(mockHttps.requestCount, 1);
-        },console.log)
+        })
     });
 
     it.should("change message visibility", function () {
@@ -162,7 +162,7 @@ it.describe("Make a call to the amazon sqs",function (it) {
         var sqsClient = new aws.SQSClient(extd.merge(testSearchOptions, {http: mockHttp, https: mockHttps}));
         return sqsClient.changeMessageVisibility(testSearchOptions, 1).then(function () {
             assert.equal(mockHttps.requestCount, 1);
-        },console.log)
+        })
     });
 
 }).as(module);
