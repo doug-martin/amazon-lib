@@ -10,8 +10,17 @@
     "author": "Doug Martin",
     "main": "index.js",
     "dependencies" : {
-        "comb" : ">=0.0.5",
-        "xml2js" : ">=0.1.11"
+        "xml2js" : ">=0.1.11",
+        "extended": "~0.0.3",
+        "declare.js": "~0.0.4",
+        "promise-extended": "~0.0.4",
+        "object-extended": "~0.0.3",
+        "is-extended": "~0.0.4",
+        "it": "~0.2.2",
+        "sandboxed-module": "~0.2.0"
+    },
+    "scripts": {
+        "test": "it -r dot"
     },
     "directories": {
         "lib": "lib"
