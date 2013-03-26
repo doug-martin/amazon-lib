@@ -19,6 +19,9 @@
         "it": "~0.2.2",
         "sandboxed-module": "~0.2.0"
     },
+    "scripts": {
+        "test": "it -r dot"
+    },
     "directories": {
         "lib": "lib"
     },

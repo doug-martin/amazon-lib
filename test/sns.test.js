@@ -140,7 +140,7 @@ it.describe("Make a call to the amazon sns",function (it) {
         return snsClient.publish(testPublishOptions).then(function (res) {
             assert.equal(res, '94f20ce6-13c5-43a0-9a9e-ca52d816e90b');
             assert.equal(mockHttps.requestCount, 1);
-        }, console.log)
+        })
     });
 
     it.should("subscribe", function () {
@@ -157,7 +157,7 @@ it.describe("Make a call to the amazon sns",function (it) {
         return snsClient.subscribe(testSubscribeOptions).then(function (res) {
             assert.equal(res, 'pending confirmation');
             assert.equal(mockHttps.requestCount, 1);
-        }, console.log)
+        })
     });
 
     it.should("unSubscribe", function () {
