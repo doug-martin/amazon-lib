@@ -1,16 +1,22 @@
 {
     "name": "amazon-lib",
     "description": "AWS Library",
-    "version": "0.0.2",
-    "keywords" : ["Amazon", "AWS", "SQS", "SNS"],
+    "version": "0.1.0",
+    "keywords": [
+        "Amazon",
+        "AWS",
+        "SQS",
+        "SNS",
+        "Amazon Product API"
+    ],
     "repository": {
         "type": "git",
         "url": "git@github.com:doug-martin/amazon-lib.git"
     },
     "author": "Doug Martin",
     "main": "index.js",
-    "dependencies" : {
-        "xml2js" : ">=0.1.11",
+    "dependencies": {
+        "xml2js": ">=0.1.11",
         "extended": "~0.0.3",
         "declare.js": "~0.0.4",
         "promise-extended": "~0.0.4",
@@ -27,5 +33,10 @@
     },
     "engines": {
         "node": ">= 0.4.4"
+    },
+    "devDependencies": {
+        "grunt-it": "~0.3.0",
+        "grunt": "~0.4.1",
+        "grunt-contrib-jshint": "~0.3.0"
     }
 }

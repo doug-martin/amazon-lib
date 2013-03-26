@@ -25,7 +25,6 @@ it.describe("Make a call to the amazon sns",function (it) {
             protocol: "protocol",
             endpoint: "endpoint"
         }, requiredOptions);
-    ;
 
     function createMockHttp(assertOptions, assertBody, xmlData) {
         mockHttp = new MockHttp(assertOptions, assertBody, xmlData);
@@ -55,7 +54,7 @@ it.describe("Make a call to the amazon sns",function (it) {
         return snsClient.addPermission(testSearchOptions, {}).then(function (results) {
             assert.equal(results.test, "test");
             assert.equal(mockHttps.requestCount, 1);
-        })
+        });
     });
 
     it.should("remove permission", function () {
@@ -123,7 +122,7 @@ it.describe("Make a call to the amazon sns",function (it) {
         var snsClient = new aws.SNSClient(extd.merge(testSearchOptions, {http: mockHttp, https: mockHttps}));
         return snsClient.getTopicAttributes(testSearchOptions).then(function () {
             assert.equal(mockHttps.requestCount, 1);
-        })
+        });
     });
 
     it.should("publish", function () {
@@ -140,7 +139,7 @@ it.describe("Make a call to the amazon sns",function (it) {
         return snsClient.publish(testPublishOptions).then(function (res) {
             assert.equal(res, '94f20ce6-13c5-43a0-9a9e-ca52d816e90b');
             assert.equal(mockHttps.requestCount, 1);
-        })
+        });
     });
 
     it.should("subscribe", function () {
@@ -157,7 +156,7 @@ it.describe("Make a call to the amazon sns",function (it) {
         return snsClient.subscribe(testSubscribeOptions).then(function (res) {
             assert.equal(res, 'pending confirmation');
             assert.equal(mockHttps.requestCount, 1);
-        })
+        });
     });
 
     it.should("unSubscribe", function () {
@@ -173,6 +172,6 @@ it.describe("Make a call to the amazon sns",function (it) {
         var snsClient = new aws.SNSClient(extd.merge(testSearchOptions, {http: mockHttp, https: mockHttps}));
         return snsClient.unSubscribe(testSearchOptions).then(function () {
             assert.equal(mockHttps.requestCount, 1);
-        })
+        });
     });
 }).as(module);

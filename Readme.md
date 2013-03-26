@@ -1,6 +1,8 @@
-#Amazon lib
+[![Build Status](https://travis-ci.org/doug-martin/amazon-lib.png)](https://travis-ci.org/doug-martin/amazon-lib)
 
-##Overview
+# Amazon lib
+
+## Overview
 
 Plug-able AWS client with support for
 
@@ -8,7 +10,7 @@ Plug-able AWS client with support for
   * SNS (Simple Notificaton Service)
 Can easily be extended and extensions are welcome.
 
-##Why this library?
+## Why this library?
 
 This library leverages Promises to allow for flow control as well as full error catching, and propogation(Now you have to handle them :) ). Its extensible.
 
@@ -16,9 +18,9 @@ This library leverages Promises to allow for flow control as well as full error 
 
     npm install amazon-lib
 
-##Usage
+## Usage
 
-###SQS
+### SQS
 
 Available operations, SEE API for options and description of params
 
@@ -37,7 +39,7 @@ Available operations, SEE API for options and description of params
    * doAction(/*Object*/options)
       * Performes the action specified by options.Action, and params required should also be included in the object. This method should be used for any missing API operations.
 
-WIthout queue
+Without queue
 
 ```js
 
@@ -83,7 +85,7 @@ sqsClient.listQueues("test-queue").then(function(queues){
 sqsClient.receiveMessages({maxNumberOfMessages : 3, visibilityTimeout:(1000*60)*2}).then(function(messages){//do something ....}
 
 ```
-###SNS
+### SNS
 
 Avaiable operations. See SNS API for description of parameters
 
@@ -110,7 +112,7 @@ snsClient.publish({
 
 ```
 
-###Product Advertising
+### Product Advertising
 
 Available opertations. See Product Advertising API for description of parameters
 
@@ -125,12 +127,12 @@ var productClient = new aws.ProductAdvertising({
 });
 
 productClient.search({SearchIndex: "Books", Keyword: "Harry Potter"}).then(function(results){
-   <Do something with the results>
+   //<Do something with the results>
 });
 
 ```
 
-##License
+## License
 
 (The MIT License)
 
