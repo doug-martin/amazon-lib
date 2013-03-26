@@ -110,6 +110,26 @@ snsClient.publish({
 
 ```
 
+###Product Advertising
+
+Available opertations. See Product Advertising API for description of parameters
+
+   * search(query)
+   * lookup(query)
+
+```js
+var productClient = new aws.ProductAdvertising({
+      awsAccessKeyId: '<Your key>',
+      awsSecretAccessKey: '<Your Secret>',
+      associateTag: '<Your Associate Tag>'
+});
+
+productClient.search({SearchIndex: "Books", Keyword: "Harry Potter"}).then(function(results){
+   <Do something with the results>
+});
+
+```
+
 ##License
 
 (The MIT License)
