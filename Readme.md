@@ -43,7 +43,7 @@ Without queue
 
 ```js
 
-var aws = require('amazon-ib'),
+var aws = require('amazon-lib'),
       url = require('url'),
 
 var sqsClient = new aws.SQSClient({
